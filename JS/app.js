@@ -67,9 +67,10 @@ function save() {
     alert("Please input positive number :( ");
   } else {
     const total_Income = parseFloat(income_Input.value);
+    const balance1 = parseInt(document.getElementById("display-balance").innerText)
     let saved = total_Income * (parseFloat(saving_Input.value) / 100);
     
-    let remained = minus(total_Income, parseFloat(saved));
+    let remained = minus(balance1, parseFloat(saved));
     if (
       parseFloat(remained) < 0) {
       alert("You cannot save more than your balance :'( ");
