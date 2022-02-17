@@ -69,7 +69,7 @@ function save() {
     const total_Income = parseFloat(income_Input.value);
     let saved = total_Income * (parseFloat(saving_Input.value) / 100);
     
-    let remained = minus(balance, parseFloat(saved));
+    let remained = minus(total_Income, parseFloat(saved));
     if (
       parseFloat(remained) < 0) {
       alert("You cannot save more than your balance :'( ");
