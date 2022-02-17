@@ -66,8 +66,8 @@ function save() {
   } else if (parseFloat(saving_Input.value) < 0) {
     alert("Please input positive number :( ");
   } else {
-    const balance = parseFloat(balance_Display.innerText);
-    let saved = balance * (parseFloat(saving_Input.value) / 100);
+    const total_Income = parseFloat(income_Input.value);
+    let saved = total_Income * (parseFloat(saving_Input.value) / 100);
     
     let remained = minus(balance, parseFloat(saved));
     if (
